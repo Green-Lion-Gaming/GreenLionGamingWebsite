@@ -3,5 +3,9 @@ Front End
   Aaron -
 
 Back End
-  Deshanno - 
-  Diego - 
+  Deshanno: Store data table design
+    - Store inventory data
+    - Store pricing data
+  Diego: Customer data table design
+    - Customer personal data
+    - Customer payment data
