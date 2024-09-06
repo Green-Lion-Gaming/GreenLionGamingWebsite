@@ -19,8 +19,9 @@ h1 {
   border-bottom: 3px solid #023020;
   display: block; /* Changed from inline-block to block */
   padding-bottom: 10px;
-  background: linear-gradient(to right, #355E3B, #023020);
+  background: linear-gradient(to right, #355e3b, #023020);
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
   opacity: 0;
   transform: translateY(20px);
@@ -47,7 +48,7 @@ div {
 }
 
 .nav-item a:hover {
-  color: #FFFDD0;
+  color: #fffdd0;
   text-decoration: underline;
 }
 
@@ -77,12 +78,12 @@ div {
 }
 
 #footer_text a {
-    color: white;
+  color: white;
   text-decoration: none;
 }
 
 #footer_text a:hover {
-  color: #FFFDD0;
+  color: #fffdd0;
   text-decoration: underline;
 }
 
