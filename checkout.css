@@ -1,115 +1,114 @@
 /* Global Styles */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #e4dfdf;
-    color: #333;
-  }
-  
-  /* Header */
-  h1 {
-    margin: 20px auto;
-    text-align: center;
-    color: #023020;
-    font-size: 3rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    border-bottom: 3px solid #023020;
-    display: block; /* Changed from inline-block to block */
-    padding-bottom: 10px;
-    background: linear-gradient(to right, #355e3b, #023020);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: slideUpFadeIn 2s ease-out forwards;
-  }
-  
-  div {
-    display: flex;
-    justify-content: center; /* Centers the nav items horizontally */
-  }
-  
-  /* Navigation Menu */
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e4dfdf;
+  color: #333;
+}
+
+/* Header */
+h1 {
+  margin: 20px auto;
+  text-align: center;
+  color: #023020;
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  border-bottom: 3px solid #023020;
+  display: block; /* Changed from inline-block to block */
+  padding-bottom: 10px;
+  background: linear-gradient(to right, #355e3b, #023020);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUpFadeIn 2s ease-out forwards;
+}
+
+div {
+  display: flex;
+  justify-content: center; /* Centers the nav items horizontally */
+}
+
+/* Navigation Menu */
+.nav-item {
+  list-style: none;
+  display: inline;
+  margin: 0 20px;
+  text-align: center;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.nav-item a:hover {
+  color: #fffdd0;
+  text-decoration: underline;
+}
+
+/* Footer */
+#footer {
+  background-color: #2c3e50;
+  color: white;
+  padding: 16px 0 60px 0;
+  text-align: center;
+}
+
+#footer .footer_content {
+  display: inline;
+  text-align: center;
+}
+
+#footer_logo {
+  margin-bottom: 10px;
+}
+
+#footer_text {
+  font-size: 0.9rem;
+}
+
+#footer_text div {
+  margin-bottom: 10px;
+}
+
+#footer_text a {
+  color: white;
+  text-decoration: none;
+}
+
+#footer_text a:hover {
+  color: #fffdd0;
+  text-decoration: underline;
+}
+
+.rule {
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  margin: 20px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .nav-item {
-    list-style: none;
-    display: inline;
-    margin: 0 20px;
+    display: block;
+    margin: 10px 0;
     text-align: center;
   }
-  
-  .nav-item a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.2rem;
+}
+@keyframes slideUpFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Start position */
   }
-  
-  .nav-item a:hover {
-    color: #fffdd0;
-    text-decoration: underline;
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End position */
   }
-  
-  /* Footer */
-  #footer {
-    background-color: #2c3e50;
-    color: white;
-    padding: 16px 0 60px 0;
-    text-align: center;
-  }
-  
-  #footer .footer_content {
-    display: inline;
-    text-align: center;
-  }
-  
-  #footer_logo {
-    margin-bottom: 10px;
-  }
-  
-  #footer_text {
-    font-size: 0.9rem;
-  }
-  
-  #footer_text div {
-    margin-bottom: 10px;
-  }
-  
-  #footer_text a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  #footer_text a:hover {
-    color: #fffdd0;
-    text-decoration: underline;
-  }
-  
-  .rule {
-    width: 100%;
-    height: 1px;
-    background-color: #fff;
-    margin: 20px 0;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .nav-item {
-      display: block;
-      margin: 10px 0;
-      text-align: center;
-    }
-  }
-  @keyframes slideUpFadeIn {
-    0% {
-      opacity: 0;
-      transform: translateY(20px); /* Start position */
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0); /* End position */
-    }
-  }
-  
+}
