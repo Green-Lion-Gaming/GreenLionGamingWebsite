@@ -1,50 +1,149 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Signup Page</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="sign_styles.css" rel="stylesheet">
-  </head>
-  <body class="text-center bg-light">
+<html lang="en" data-bs-theme="dark">
+<head>
+    <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.min.css" />
+    <title>GreenLionGaming - Signup</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+    </style>
+</head>
 
-    <main class="form-signin w-100 m-auto">
-      <form id="signupForm">
-        <img class="mb-4" src="logo.png" alt="Logo" width="72" height="72">
-        <h1 class="h3 mb-3 fw-normal">Create an account</h1>
+<body>
+    <!--Navigation-->
+    <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+                <span class="fs-4">GreenLionGaming</span>
+            </a>
 
-        <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="floatingName" placeholder="John Doe">
-          <label for="floatingName">Full Name</label>
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Store</a></li>
+                <li class="nav-item"><a href="Login.html" class="nav-link">Login</a></li>
+                <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Sign Up</a></li>
+                <li class="nav-item"><a href="Checkout.html" class="nav-link">Checkout</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Policy</a></li>
+            </ul>
+        </header>
+    </div>
+    <!--Signup Form-->
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h2 class="text-center mb-4">Signup</h2>
+            <form id="signupForm">
+                <div class="form-group mb-3">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" id="username" placeholder="Enter username" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Password" required>
+                    <div id="strengthMessage" class="mt-2"></div>
+                </div>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" id="showPassword">
+                    <label class="form-check-label" for="showPassword">Show Password</label>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" class="form-control" id="confirm-password" placeholder="Confirm password" required>
+                </div>
+                <button class="btn btn-primary w-100 py-2" type="submit">Create Account</button>
+            </form>
         </div>
-        <div class="form-floating mb-3">
-          <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com">
-          <label for="floatingEmail">Email address</label>
-        </div>
-        <div class="form-floating mb-3">
-          <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
-          <label for="floatingPassword">Password</label>
-          <!-- Password Strength Indicator -->
-          <div id="passwordHelpBlock" class="form-text">
-            Your password must be at least 8 characters long, contain an uppercase letter, a lowercase letter, a number, and a special character.
-          </div>
-          <div id="passwordStrength" class="progress mt-2">
-            <div id="passwordStrengthBar" class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-        </div>
-        <div class="form-floating mb-3">
-          <input type="password" class="form-control" id="floatingConfirmPassword" placeholder="Confirm Password" required>
-          <label for="floatingConfirmPassword">Confirm Password</label>
-        </div>
+    </div>
+    </div>
 
-        <button class="btn btn-primary w-100 py-2" type="submit">Create Account</button>
+    <script src="../bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const passwordField = document.getElementById('password');
+        const confirmPasswordField = document.getElementById('confirm-password');
+        const strengthMessage = document.getElementById('strengthMessage');
 
-        <p class="mt-5 mb-3 text-muted">&copy; 2024</p>
-        <a href="login.html">Already have an account? Sign in</a>
-      </form>
-    </main>
+        passwordField.addEventListener('input', function () {
+            const strength = getPasswordStrength(passwordField.value);
+            strengthMessage.textContent = `Password strength: ${strength}`;
+            strengthMessage.style.color = getStrengthColor(strength);
+            checkPasswordMatch();
+        });
 
-    <script src="Sign_script.js"></script>
-  </body>
+        confirmPasswordField.addEventListener('input', checkPasswordMatch);
+
+        function checkPasswordMatch() {
+            const password = passwordField.value;
+            const confirmPassword = confirmPasswordField.value;
+            const matchMessage = document.getElementById('matchMessage');
+
+            if (!matchMessage) {
+                const newMatchMessage = document.createElement('div');
+                newMatchMessage.id = 'matchMessage';
+                confirmPasswordField.parentNode.appendChild(newMatchMessage);
+            }
+
+            if (password !== confirmPassword && confirmPassword !== '') {
+                document.getElementById('matchMessage').textContent = 'Passwords do not match!';
+                document.getElementById('matchMessage').style.color = 'red';
+            } else if (password === confirmPassword && confirmPassword !== '') {
+                document.getElementById('matchMessage').textContent = 'Passwords match!';
+                document.getElementById('matchMessage').style.color = 'green';
+            } else {
+                document.getElementById('matchMessage').textContent = '';
+            }
+        }
+
+        function getPasswordStrength(password) {
+            let strength = 'Weak';
+            if (password.length >= 8 && /[A-Z]/.test(password) && /[0-9]/.test(password) && /[!@#$%^&*]/.test(password)) {
+                strength = 'Strong';
+            } else if (password.length >= 6) {
+                strength = 'Medium';
+            }
+            return strength;
+        }
+
+        function getStrengthColor(strength) {
+            switch (strength) {
+                case 'Strong':
+                    return 'green';
+                case 'Medium':
+                    return 'orange';
+                case 'Weak':
+                default:
+                    return 'red';
+            }
+        }
+        document.getElementById('showPassword').addEventListener('change', function () {
+            const passwordField = document.getElementById('password');
+            const confirmPasswordField = document.getElementById('confirm-password');
+
+            if (this.checked) {
+                passwordField.type = 'text';
+                confirmPasswordField.type = 'text';
+            } else {
+                passwordField.type = 'password';
+                confirmPasswordField.type = 'password';
+            }
+        });
+        document.getElementById('signupForm').addEventListener('submit', function (e) {
+            const password = passwordField.value;
+            const confirmPassword = confirmPasswordField.value;
+
+            // Prevent form submission if passwords do not match
+            if (password !== confirmPassword) {
+                e.preventDefault();
+                alert('Passwords do not match!'); // Show alert if passwords don't match
+            }
+        });
+    </script>
+</body>
 </html>
