@@ -1,17 +1,22 @@
 Front End
   Kevin Du:
-    - Login/Signup page
+    - Write HTML for signup and login pages
+    - Format pages to fit standard theme
   Aaron Khan: 
-    - Checkout page
-    - Confirmation page
+    - Create standard footer for all pages
+    - Create validation script for login and signup pages
    Stephen Meikle:
-    - Homepage page
+    - Server side API endpoint
 Back End
   Deshanno Janecio Hodge Baptiste:
-  Store data table design
-    - Store inventory data
-    - Store pricing data
+  Store data table and relationships creation
+    - Inventory table
+    - Developer table
+    - Publisher table
+    - Category table
+    - Game table
   Diego Perez Villanueva: 
-  Customer data table design
-    - Customer personal data
-    - Customer payment data
+  Customer data table and relationships creation
+    - User table
+    - Customer table
+    - Customer payment info table
