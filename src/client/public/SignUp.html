@@ -14,6 +14,7 @@
 </head>
 
 <body>
+
     <!--Navigation-->
     <div class="container">
         <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
@@ -32,14 +33,35 @@
             </ul>
         </header>
     </div>
+
     <!--Signup Form-->
     <div class="row justify-content-center">
         <div class="col-md-6">
             <h2 class="text-center mb-4">Signup</h2>
-            <form id="signupForm">
+            <form id="signupForm">               
                 <div class="form-group mb-3">
-                    <label for="username">Username</label>
-                    <input type="text" class="form-control" id="username" placeholder="Enter username" required>
+                    <label for="username">First Name</label>
+                    <input type="text" class="form-control" name="firstname" placeholder="First Name" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="username">Last Name</label>
+                    <input type="text" class="form-control" name="lastname" placeholder="Last Name" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="username">City</label>
+                    <input type="text" class="form-control" name="city" placeholder="City" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="username">State</label>
+                    <input type="text" class="form-control" name="state" placeholder="State" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="username">Zipcode</label>
+                    <input type="text" class="form-control" name="zipcode" placeholder="Zipcode" required>
+                </div>
+                <div class="form-group mb-3">
+                     <label for="username">Username</label>
+                     <input type="text" class="form-control" id="username" placeholder="Enter username" required>
                 </div>
                 <div class="form-group mb-3">
                     <label for="email">Email</label>
@@ -61,7 +83,6 @@
                 <button class="btn btn-primary w-100 py-2" type="submit">Create Account</button>
             </form>
         </div>
-    </div>
     </div>
 
     <script src="../bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
