@@ -8,7 +8,7 @@ require("dotenv").config()
 const connection = mysql.createConnection({
     "user": process.env.database_user,
     "password": process.env.database_password,
-    "database": process.env.lamaysy1_sanFLOW,
+    "database": process.env.database_name,
     "host": process.env.database_host,
     "enableKeepAlive": true,
     "idleTimeout": 60 * 60 * 1000 // One Hour
