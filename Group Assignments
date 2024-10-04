@@ -3,8 +3,6 @@ Front End
     - Write HTML for signup and login pages
     - Format pages to fit standard theme
   Aaron Khan: 
-    - Create standard footer for all pages
-    - Create validation script for login and signup pages
     - Draft store page design
    Stephen Meikle:
     - Server side API endpoint
