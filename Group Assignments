@@ -1,11 +1,12 @@
 Front End
   Kevin Du:
-    - Write HTML for signup and login pages
-    - Format pages to fit standard theme
+    - Work on adding and finishing the last remaining pages of the game store
+    - Assist Stephen in server side if availble time
   Aaron Khan: 
-    - Draft store page design
+    -  Work on adding and finishing the last remaining pages of the game store
+    -  Assist Stephen in server side if availble time
    Stephen Meikle:
-    - Server side API endpoint
+    - Server side pulling and storing data
 Back End
   Deshanno Janecio Hodge Baptiste:
   Store data table and relationships creation
