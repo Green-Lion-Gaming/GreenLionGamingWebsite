@@ -2,6 +2,11 @@ const express = require("express")
 const app = express();
 const bodyParser = require("body-parser");
 const mysql = require('mysql2');
+const fs = require('fs');
+const path = require('path');
+
+const publicDir = path.join(__dirname, '../client/public');
+
 
 require("dotenv").config()
 
@@ -15,6 +20,7 @@ const connection = mysql.createConnection({
 });
 
 app.use(bodyParser.json());
+app.use(express.static(publicDir));
 
 
 app.get("/customer/get-customer/:id", async function (req, res) {
@@ -55,6 +61,25 @@ app.post("/customer/register", async function (req, res) {
     }
 })
 
+
+function getSubdirectories(srcPath) {
+  return fs.readdirSync(srcPath).filter(file => {
+    return fs.statSync(path.join(srcPath, file)).isDirectory();
+  });
+}
+
+// Handle server-side routing
+getSubdirectories(publicDir).forEach(subDir => {
+  app.get(`/${subDir}`, (req, res) => {
+    const htmlFilePath = path.join(publicDir, subDir, 'index.html');
+    
+    if (fs.existsSync(htmlFilePath)) {
+      res.sendFile(htmlFilePath);
+    } else {
+      res.status(404).send(`<h1>404 - Page not found in ${subDir}</h1>`);
+    }
+  });
+});
 
 app.listen(3000);
 console.log("App listening on port 3000!");
