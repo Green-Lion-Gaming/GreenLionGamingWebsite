@@ -1,22 +1,14 @@
 Front End
   Kevin Du:
-    - Work on adding and finishing the last remaining pages of the game store
-    - Assist Stephen in server side if availble time
+    - Design home and social media pages
   Aaron Khan: 
-    -  Work on adding and finishing the last remaining pages of the game store
-    -  Assist Stephen in server side if availble time
+    - Research and implement a new hosting solution
+    - Design store page
    Stephen Meikle:
-    - Server side pulling and storing data
+    - Set up front end webpage routing and styling
 Back End
   Deshanno Janecio Hodge Baptiste:
-  Store data table and relationships creation
-    - Inventory table
-    - Developer table
-    - Publisher table
-    - Category table
-    - Game table
+    - Research and implement a new hosting solution
   Diego Perez Villanueva: 
-  Customer data table and relationships creation
-    - User table
-    - Customer table
-    - Customer payment info table
+    - Research and implement a new hosting solution
+    - Maintain gantt chart
