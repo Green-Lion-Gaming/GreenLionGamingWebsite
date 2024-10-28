@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <link rel="stylesheet" href="../bootstrap/bootstrap-5.3.3-dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../bootstrap/bootstrap-icons-1.11.3/font/bootstrap-icons.min.css"/>
+    <title>GreenLionGaming - Login</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="../images/Logo.PNG">
+    <style>
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Navigation-->
+    <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+            <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                <!-- <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg> -->
+                <img src="../images/Logo.PNG" width="50" height="50" class="me-2">
+                <span class="fs-4">GreenLionGaming</span>
+            </a>
+
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="store.html" class="nav-link">Store</a></li>
+                <li class="nav-item"><a href="Login.html" class="nav-link active" aria-current="page">Login</a></li>
+                <li class="nav-item"><a href="Checkout.html" class="nav-link">Checkout</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Policy</a></li>
+            </ul>
+        </header>
+    </div>
+
+        <!--Login Form-->
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h2 class="text-center mb-4">Login</h2>
+                <form class="needs-validation" novalidate>
+                    <div class="form-group mb-3">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+                        <div class="invalid-feedback">
+                            Email is required.
+                        </div>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Password" required>
+                        <div class="invalid-feedback">
+                            Password is required
+                        </div>
+                    </div>
+                    <div class="form-check mb-3">
+                        <input type="checkbox" class="form-check-input" id="rememberMe">
+                        <label class="form-check-label" for="rememberMe">Remember me</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Login</button>
+                    <a href="SignUp.html">Create an account</a>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer-->
+
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+              <!-- <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"/></svg> -->
+               <img src="../images/Logo.PNG" width="50" height="50">
+            </a>
+            <span class="mb-3 mb-md-0 text-body-secondary">&copy; 2024 Company, Inc</span>
+          </div>
+      
+          <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-3"><a class="text-body-secondary" href="https://x.com/GreenLion121494"><i class="bi bi-twitter" style="font-size: 1.5rem;"></i></a></li>
+          <li class="ms-3"><a class="text-body-secondary" href="https://www.instagram.com/greenliongamingstore/"><i class="bi bi-instagram" style="font-size: 1.5rem;"></i></a></li>
+          <li class="ms-3"><a class="text-body-secondary" href="https://www.facebook.com/profile.php?id=61567663821271"><i class="bi bi-facebook" style="font-size: 1.5rem;"></i></a></li>
+          </ul>
+        </footer>
+      </div>
+
+    <script src="../bootstrap/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./validate.js"></script>
+</body>
+</html>
