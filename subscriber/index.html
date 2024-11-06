@@ -1,0 +1,223 @@
+﻿<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <!-- <link rel="stylesheet" href="checkout.css"
+       get rid of css file? /> -->
+    <title>GreenLionGaming</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../bootstrap/bootstrap-5.3.3-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../bootstrap/bootstrap-icons-1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="icon" href="../images/Logo.PNG" class="rounded">
+    <script src="../bootstrap/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        /* Global Styles */
+
+        body {
+            background-color: #1c1e20;
+        }
+
+        /* Header */
+        h1 {
+            margin: 20px auto;
+            text-align: center;
+            color: #42cf9e;
+            font-size: 3rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            border-bottom: 3px solid #6bb39a;
+            display: block;
+            /* Changed from inline-block to block */
+            padding-bottom: 10px;
+            background: linear-gradient(to right, #91ec9e, #97ecce);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: slideUpFadeIn 2s ease-out forwards;
+        }
+
+        /* Navigation Menu */
+        .nav-item {
+            list-style: none;
+            display: inline;
+            margin: 0 20px;
+            text-align: center;
+        }
+
+        .text-success {
+            color: #6bb39a,
+        }
+
+        .nav-item a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+            .nav-item a:hover {
+                color: #fffdd0;
+                text-decoration: underline;
+            }
+
+        /* Footer */
+        #footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 16px 0 60px 0;
+            text-align: center;
+        }
+
+            #footer .footer_content {
+                display: inline;
+                text-align: center;
+            }
+
+        #footer_logo {
+            margin-bottom: 1px;
+        }
+
+        #footer_text {
+            font-size: 0.9rem;
+        }
+
+            #footer_text div {
+                margin-bottom: 1px;
+            }
+
+            #footer_text a {
+                color: white;
+                text-decoration: none;
+            }
+
+                #footer_text a:hover {
+                    color: #fffdd0;
+                    text-decoration: underline;
+                }
+
+        .rule {
+            width: 100%;
+            height: 1px;
+            background-color: #fff;
+            margin: 20px 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-item {
+                display: block;
+                margin: 10px 0;
+                text-align: center;
+            }
+        }
+
+        @keyframes slideUpFadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+                /* Start position */
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+                /* End position */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+            <a href="/home" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                <!-- <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg> -->
+                <img src="../images/Logo.PNG" width="50" height="50" class="me-2">
+                <span class="fs-4">GreenLionGaming</span>
+            </a>
+
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a href="/home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="/store" class="nav-link">Store</a></li>
+                <li class="nav-item"><a href="/login" class="nav-link">Login</a></li>
+                <li class="nav-item"><a href="/signup" class="nav-link">Sign Up</a></li>
+                <li class="nav-item"><a href="/checkout" class="nav-link">Checkout</a></li>
+                <li class="nav-item"><a href="/policy" class="nav-link active" aria-current="page">Policy</a></li>
+            </ul>
+        </header>
+    </div>
+
+    <main>
+        <div class="container position-relative">
+            <div class="row pt-119">
+                <div class="col-md-10 mx-auto">
+                    <div class="row">
+                        <div class="col-md-12 content">
+                            <header class="text-center">
+                                <h1>Subscriber Agreement</h1>
+                            </header>
+                            <h2>Introduction</h2>
+                            <p>Thank you for subscribing to Green Lion Gaming. By subscribing, you agree to the terms and conditions outlined in this agreement.</p>
+
+                            <h2>Subscription Fees</h2>
+                            <p>Your subscription includes a recurring fee, which will be billed based on your selected plan. You agree to pay all fees associated with your subscription.</p>
+
+                            <h2>Cancellation Policy</h2>
+                            <p>You may cancel your subscription at any time. Upon cancellation, you will continue to have access until the end of the billing cycle.</p>
+
+                            <h2>User Responsibilities</h2>
+                            <p>Subscribers are responsible for providing accurate information and ensuring their account remains secure. Any unauthorized use should be reported immediately.</p>
+
+                            <h2>Amendments</h2>
+                            <p>Green Lion Gaming reserves the right to amend this agreement at any time. We will notify you of any changes to the terms.</p>
+
+                            <h2>Contact Us</h2>
+                            <p>For questions or concerns regarding this agreement, please contact us at [insert email] or [insert phone number].</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="container" id="footer">
+        <div class="container">
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
+                <div class="col-md-4 d-flex align-items-center">
+                    <a href="/home" class="mb-3 me-2 mb-md-0 text-body-secondary">
+                        <img class="rounded" src="../images/Logo.PNG" width="50" height="50" id="footer_logo">
+                    </a>
+                    <span class="text-center">&copy; 2024 Green Lion Gaming</span>
+                </div>
+
+                <div class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto text-decoration-none">
+                    <a>All rights reserved. All trademarks are property of their respective owners in the US and other countries.</a>
+                </div>
+
+                <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                    <li class="ms-3"><a class="text-body-secondary" href="https://x.com/GreenLion121494"><i class="bi bi-twitter" style="font-size: 1.5rem;"></i></a></li>
+                    <li class="ms-3"><a class="text-body-secondary" href="https://www.instagram.com/greenliongamingstore/"><i class="bi bi-instagram" style="font-size: 1.5rem;"></i></a></li>
+                    <li class="ms-3"><a class="text-body-secondary" href="https://www.facebook.com/profile.php?id=61567663821271"><i class="bi bi-facebook" style="font-size: 1.5rem;"></i></a></li>
+                </ul>
+            </footer>
+
+            <div class="container">
+                <ul class="d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto text-decoration-none list-unstyled list-group list-group-horizontal">
+                    <li class="footer-item"><a href="/privacy" class="footer-link">Privacy Policy</a></li>
+                    &nbsp;
+                    <span>|</span> &nbsp;
+                    <li class="footer-item"><a href="/subscriber" class="footer-link">Green Lion Gaming Subscriber Agreement</a></li>
+                    &nbsp;
+                    <span>|</span> &nbsp;
+                    <li class="footer-item"><a href="/support" class="footer-link">Support</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
