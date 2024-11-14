@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 const mysql = require('mysql2');
 const fs = require('fs');
 const path = require('path');
+const { constants } = require("buffer");
 
 const publicDir = path.join(__dirname, '../client/public');
 
@@ -41,6 +42,30 @@ app.get("/customer/get-customer/:id", async function (req, res) {
     }
 });
 
+
+app.get("/marketplace/products", async function (req, res) {
+    let pageLimit = req.query.size ? Number(req.query.size) : 50
+    
+    if (pageLimit > 50 ) {
+        pageLimit = 50;
+    }
+    try {
+        connection.query(
+            'SELECT * from `products` LIMIT ?', [pageLimit],
+            function(err, results, fields) {
+                if (results && results != undefined) {
+                    res.json(results)
+                } else {
+                    res.status(400).send({ message: "Cannot retreive store products" })
+                }
+            }
+        )
+    } catch(err) {
+        console.log(err);
+        res.status(500).send({ message: "Internal server error, please try again." })
+    }
+})
+
 app.post("/customer/register", async function (req, res) {
     try {
         connection.query(
@@ -62,11 +87,36 @@ app.post("/customer/register", async function (req, res) {
 })
 
 
+app.post("/users/register", async function(req, res) {
+    try {
+        connection.query(
+            'INSERT INTO `users` (username, email, password) VALUES (?, ?, ?)', [req.body.username, req.body.email, req.body.password],
+
+            function(err, results, fields) {
+                if (results && results != undefined) {
+                    res.status(200).send({"message": results.user_id})
+                } else {
+                    console.log(err)
+                    res.status(400).send({ message: "Cannot register user at this time." })
+                }
+            }
+        )
+    } catch(err) {
+        console.log(err);
+        res.status(500).send({ message: "Internal server error, please try again." }) 
+    }
+})
+
+
 function getSubdirectories(srcPath) {
   return fs.readdirSync(srcPath).filter(file => {
     return fs.statSync(path.join(srcPath, file)).isDirectory();
   });
 }
+
+app.get(`/`, (req, res) => {
+    res.redirect("/home");
+})
 
 // Handle server-side routing
 getSubdirectories(publicDir).forEach(subDir => {
