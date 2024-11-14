@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <link rel="stylesheet" href="./bootstrap/bootstrap-5.3.3-dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./bootstrap/bootstrap-icons-1.11.3/font/bootstrap-icons.min.css"/>
+    <title>GreenLionGaming - Confirmation</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="../images/Logo.PNG" class="rounded">
+    <style>
+      .bi {
+          vertical-align: -.125em;
+          fill: currentColor;
+      }
+
+      /*nav*/
+      .nav-item {
+        list-style: none;
+        display: inline;
+        margin: 0 20px;
+        text-align: center;
+      }
+
+      .nav-item a{
+        text-decoration: none;
+        color: white;
+        font-size: 1.2rem;
+      }
+
+      .nav-item a:hover {
+        color: #fffdd0;
+        text-decoration: underline;
+      }
+      
+      /*footer*/
+      #footer {
+        background-color: #2c3e50;
+        color: white;
+        padding: 16px 0 60px 0;
+        text-align: center;
+      }
+
+      #footer .footer_content {
+        display: inline;
+        text-align: center;
+      }
+
+      #footer_logo {
+        margin-bottom: 1px;
+      }
+
+      body {
+        background-color: #1c1e20;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!--Navigaation-->
+    <div class="container">
+      <header
+        class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom"
+      >
+        <a
+          href="#"
+          class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
+        >
+          <!-- <svg class="bi me-2" width="40" height="32">
+            <use xlink:href="#bootstrap"></use>
+          </svg> -->
+          <img src="../images/Logo.PNG" width="60" height="60" class="bi me-2 rounded">
+          <span class="fs-4">GreenLionGaming</span>
+        </a>
+
+        <ul class="nav nav-pills">
+          <li class="nav-item"><a href="/home" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="/store" class="nav-link">Store</a></li>
+          <li class="nav-item"><a href="/login" class="nav-link">Login</a></li>
+          <li class="nav-item"><a href="/signup" class="nav-link">Signup</a></li>
+          <li class="nav-item"><a href="/checkout" class="nav-link">Checkout</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Policy</a></li>
+        </ul>
+      </header>
+    </div>
+
+    <!--Main content-->
+
+    <div class="container mt-5 mb-5">
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-8">
+          <div class="card">
+            <div  class="text-left p-2 px-5 logo">
+              <!-- <svg class="bi" width="50" height="50"><use xlink:href="#bootstrap"/></svg> -->
+               <img class="bi" src="../images/Logo.PNG" width="80" height="80">
+            </div>
+            <div class="invoice p-5">
+              <h5>Your order is confirmed!</h5>
+
+              <span class="fw-bold d-block mt-4">Hello, CustomerName </span>
+              <span>Your order has been confirmed and will be processed soon!</span>
+
+              <div class="payment border-top mt-3 mb-3 border-bottom table-responsive">
+                <table class="table table-borderless">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="py-2">
+                          <span class="d-block text-muted">Order Date</span>
+                          <span>DateHere</span>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div class="py-2">
+                          <span class="d-block text-muted">Order No.</span>
+                          <span>OrderNumberHere</span>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div class="py-2">
+                          <span class="d-block text-muted">Payment Method</span>
+                          <span><img src="https://img.icons8.com/color/48/000000/mastercard.png" width="20" /></span>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="product border-bottom table-responsive">
+                <table class="table table-borderless">
+
+                  <tbody>
+                    <tr>
+                      <td width="20%">
+                        <img src="../images/titanfall-2.webp" width="90"> <!--Photo/thumbnail image of whats sold-->
+                      </td>
+
+                      <td width="30%">
+                        <span class="fw-bold">TitainFall 2</span>
+                        <div class="product-qty">
+                          <span class="d-block">Quantity:NumberHere</span>
+                        </div>
+                      </td>
+
+                      <td width="35%">
+                        <div class="text-start">
+                          <span class="fw-bold">$29.99</span>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="row d-flex justify-content-end">
+                <div class="col-md-5">
+                  <table class="table table-borderless">
+                    <tbody class="totals">
+                      <tr>
+                        <td>
+                          <div class="text-start">
+                            <span class="text-muted">Subtotal:</span>
+                          </div>
+                        </td>
+
+                        <td>
+                          <div class="text-center">
+                            <span>$29.99</span>
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <div class="text-start">
+                            <span class="text-muted">Tax:</span>
+                          </div>
+                        </td>
+
+                        <td>
+                          <div class="text-center">
+                            <span>$1.00</span>
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr class="border-top border-bottom">
+                        <td>
+                          <div class="text-start">
+                            <span class="fw-bold">Total:</span>
+                          </div>
+                        </td>
+
+                        <td>
+                          <div class="text-center">
+                            <span class="fw-bold">$30.99</span>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <p>A Confirmation email will be will be sent when your order is full-filled.</p>
+              <p class="fw-bold mb-0">Thank you for your purchase!</p>
+              <span>GreenLionGaming</span>
+            </div>
+            <div class="d-flex justify-content-between card-footer p3">
+              <span>Need help? Contact our support team.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Footer-->
+
+    <div class="container" id="footer">
+      <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
+          <div class="col-md-4 d-flex align-items-center">
+            <a href="/home" class="mb-3 me-2 mb-md-0 text-body-secondary">
+              <img class="rounded" src="../images/Logo.PNG" width="50" height="50" id="footer_logo">
+            </a>
+            <span class="text-center">&copy; 2024 Green Lion Gaming</span>
+          </div>
+    
+          <div class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto text-decoration-none">
+            <a>All rights reserved. All trademarks are property of their respective owners in the US and other countries.</a>
+          </div>
+    
+          <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-3"><a class="text-body-secondary" href="https://x.com/GreenLion121494"><i class="bi bi-twitter" style="font-size: 1.5rem;"></i></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href="https://www.instagram.com/greenliongamingstore/"><i class="bi bi-instagram" style="font-size: 1.5rem;"></i></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href="https://www.facebook.com/profile.php?id=61567663821271"><i class="bi bi-facebook" style="font-size: 1.5rem;"></i></a></li>
+          </ul>
+        </footer>
+    
+        <div class="container">
+          <ul class="d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto text-decoration-none list-unstyled list-group list-group-horizontal">
+            <li class=""><a href="#">Privacy Policy</a></li>
+            &nbsp; <span>|</span> &nbsp;
+            <li class=""><a href="#">Green Lion Gaming Subscriber Agreement</a></li>
+            &nbsp; <span>|</span> &nbsp;
+            <li class=""><a href="#">Support</a></li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    <script src="./bootstrap/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
