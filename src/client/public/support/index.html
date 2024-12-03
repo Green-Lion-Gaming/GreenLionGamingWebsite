@@ -128,6 +128,7 @@
             }
         }
     </style>
+    <script src="../app.js"></script>
 </head>
 
 <body>
@@ -142,10 +143,20 @@
             <ul class="nav nav-pills">
                 <li class="nav-item"><a href="/home" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="/store" class="nav-link">Store</a></li>
-                <li class="nav-item"><a href="/login" class="nav-link">Login</a></li>
-                <li class="nav-item"><a href="/signup" class="nav-link">Sign Up</a></li>
+                <li class="nav-item" id="login-section"><a href="/login" class="nav-link">Login</a></li>
+                <li class="nav-item" id="signup-section"><a href="/sign-up" class="nav-link active"
+                        aria-current="page">Sign
+                        Up</a></li>
                 <li class="nav-item"><a href="/checkout" class="nav-link">Checkout</a></li>
-                <li class="nav-item"><a href="/policy" class="nav-link active" aria-current="page">Policy</a></li>
+                <li class="nav-item"><a href="/subscriber" class="nav-link">Policy</a></li>
+                <li class="nav-item" id="logout-section"><a href="/logout" class="nav-link">Logout</a></li>
+
+                <li class="nav-item d-flex align-items-center" id="user-nav" style="display: none;">
+                    <img src="https://i.pinimg.com/736x/a3/31/a8/a331a8d0a8ff50827c6cb3437f336a30.jpg" alt="Profile"
+                        id="profile-picture" class="rounded-circle me-2"
+                        style="width: 30px; height: 30px; object-fit: cover;display: none" />
+                    <span id="username-usernav" class="text-white"></span>
+                </li>
             </ul>
         </header>
     </div>

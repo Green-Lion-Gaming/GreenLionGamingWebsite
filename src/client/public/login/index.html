@@ -7,6 +7,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="../images/Logo.PNG">
+    <script src="../app.js"></script>
     <style>
         .bi {
             vertical-align: -.125em;
@@ -28,10 +29,20 @@
             <ul class="nav nav-pills">
                 <li class="nav-item"><a href="/home" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="/store" class="nav-link">Store</a></li>
-                <li class="nav-item"><a href="/login" class="nav-link">Login</a></li>
-                <li class="nav-item"><a href="/sign-up" class="nav-link active" aria-current="page">Sign Up</a></li>
+                <li class="nav-item" id="login-section"><a href="/login" class="nav-link">Login</a></li>
+                <li class="nav-item" id="signup-section"><a href="/sign-up" class="nav-link active"
+                        aria-current="page">Sign
+                        Up</a></li>
                 <li class="nav-item"><a href="/checkout" class="nav-link">Checkout</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Policy</a></li>
+                <li class="nav-item"><a href="/subscriber" class="nav-link">Policy</a></li>
+                <li class="nav-item" id="logout-section"><a href="/logout" class="nav-link">Logout</a></li>
+
+                <li class="nav-item d-flex align-items-center" id="user-nav" style="display: none;">
+                    <img src="https://i.pinimg.com/736x/a3/31/a8/a331a8d0a8ff50827c6cb3437f336a30.jpg" alt="Profile"
+                        id="profile-picture" class="rounded-circle me-2"
+                        style="width: 30px; height: 30px; object-fit: cover;display: none" />
+                    <span id="username-usernav" class="text-white"></span>
+                </li>
             </ul>
         </header>
     </div>
@@ -40,7 +51,7 @@
 <div class="row justify-content-center">
     <div class="col-md-6">
         <h2 class="text-center mb-4">Login</h2>
-        <form class="needs-validation" novalidate>
+        <form class="needs-validation" id="login-form" novalidate>
             <div class="form-group mb-3">
                 <label for="email">Email</label>
                 <input type="email" class="form-control" id="email" placeholder="Enter email" required>
@@ -60,7 +71,7 @@
                 <label class="form-check-label" for="rememberMe">Remember me</label>
             </div>
             <button type="submit" class="btn btn-primary w-100">Login</button>
-            <a href="SignUp.html">Create an account</a>
+            <a href="/sign-up">Create an account</a>
         </form>
     </div>
 </div>
@@ -88,6 +99,8 @@
 
 <script src="../bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
 <script src="./validate.js"></script>
+<script src="./login.js"></script>
+<script src="../../scripts/app.js"></script>
 </body>
 </html>
 </body>
